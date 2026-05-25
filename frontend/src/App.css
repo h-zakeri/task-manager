@@ -1,0 +1,247 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f1f5f9;
+}
+
+.login-container{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f1f5f9;
+}
+
+.login-box{
+  background:white;
+  padding:40px;
+  border-radius:16px;
+  width:350px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.login-box h2{
+  margin-bottom:20px;
+}
+
+.login-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+}
+
+.login-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#3b82f6;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar{
+    width: 200px;
+    background: #1e293b;
+    color: white;
+    padding:20px;
+}
+.sidebar h2{
+  margin-bottom:30px;
+}
+.sidebar-title{
+  margin-bottom:30px;
+  font-size:24px;
+  font-weight:bold;
+}
+.sidebar button{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#334155;
+  color:white;
+  transition:0.2s;
+}
+
+.sidebar button:hover{
+  background:#475569;
+}
+
+.main{
+    flex:1;
+    padding:20px;
+    background: #f1f5f9;
+}
+
+.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.create-task {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.create-task input{
+  padding:10px;
+  border:1px solid #cbd5e1;
+  border-radius:8px;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+.status-btn {
+  margin-right: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.status-btn.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.status-btn.TODO {
+  background: #ccc;
+}
+
+.status-btn.IN_PROGRESS {
+  background: orange;
+  color: white;
+}
+
+.status-btn.DONE {
+  background: green;
+  color: white;
+}
+.create-btn button{
+  margin-top: 8px;
+  border:none;
+  padding:10px 16px;
+  border-radius:8px;
+  background:#3b82f6;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+.create-btn button:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #f4f5f7;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.task {
+  background: white;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  cursor: grab;
+  transition: 0.2s;
+}
+
+.task button{
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  margin-right:6px;
+  margin-top:10px;
+}
+
+.task:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.status-picker {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.status-picker button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.status-picker button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.status-picker .active {
+  opacity: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* TODO */
+.todo {
+  background: #d1d5db;
+  color: #111;
+}
+
+/* IN PROGRESS */
+.progress {
+  background: #f59e0b;
+  color: white;
+}
+
+/* DONE */
+.done {
+  background: #10b981;
+  color: white;
+}
+
+.date {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+@media(max-width:900px){
+
+  .board{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    display:none;
+  }
+
+}
