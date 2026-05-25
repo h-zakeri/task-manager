@@ -51,7 +51,10 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(List.of("http://localhost:3000")); // ❗ مهم
+        config.setAllowedOrigins(List.of(
+                "http://localhost:3000",
+                "https://task-manager-2-udlw.onrender.com"
+        ));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","PATCH","OPTIONS"));
 
