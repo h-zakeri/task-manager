@@ -30,8 +30,9 @@ function App() {
     console.log("LOGIN DATA:", username, password);
 
     try {
-      const res = await fetch(`${process.env.https://task-manager-1-xdys.onrender.com}/auth/login`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/login`, {
         method: "POST",
+}
         headers: {
           "Content-Type": "application/json",
         },
@@ -69,9 +70,9 @@ function App() {
     try {
     let url;
      if (onlyMine) {
-          url = `${process.env.https://task-manager-1-xdys.onrender.com}/tasks?mine=true&page=${page}&size=${size}&title=${search}`;
+          url = `${process.env.REACT_APP_API_URL}/tasks?mine=true&page=${page}&size=${size}&title=${search}`;
         } else {
-          url = `${process.env.https://task-manager-1-xdys.onrender.com}/tasks?page=${page}&size=${size}&title=${search}`;
+          url = `${process.env.REACT_APP_API_UR}/tasks?page=${page}&size=${size}&title=${search}`;
         }
       const res = await fetch(
         url,{
@@ -101,7 +102,7 @@ function App() {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`${process.env.https://task-manager-1-xdys.onrender.com}/tasks`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/tasks`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +140,7 @@ if (!res.ok) {
     const token = localStorage.getItem("token");
 
     try {
-      await fetch(`${process.env.https://task-manager-1-xdys.onrender.com}/tasks/${id}`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/tasks/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: "Bearer " + token,
@@ -158,7 +159,7 @@ if (!res.ok) {
 
     try {
       await fetch(
-        `${process.env.https://task-manager-1-xdys.onrender.com}/tasks/${id}/status`,
+        `${process.env.REACT_APP_API_URL}/tasks/${id}/status`,
         {
           method: "PATCH",
           headers: {
@@ -182,7 +183,7 @@ if (!res.ok) {
 
     try {
       const res = await fetch(
-        `${process.env.https://task-manager-1-xdys.onrender.com}/tasks/${id}`,
+        `${process.env.REACT_APP_API_URL}/tasks/${id}`,
         {
           method: "PUT",
           headers: {
